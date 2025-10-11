@@ -110,6 +110,7 @@ nav ul li a {
 
 
 
+
 .animated-header {
   text-align: center;
   padding: 60px 20px;
@@ -127,15 +128,36 @@ nav ul li a {
 }
 
 /* Typing Text */
-
 #typing-text {
-  display: inline;
+  display: inline-block;
   font-size: 16px;
   margin-top: 15px;
   color: #38bdf8;
   font-weight: 500;
   border-right: 2px solid #38bdf8;
+  white-space: nowrap;
+  overflow: hidden;
   animation: blink 0.75s step-end infinite;
-  white-space: normal;
+  max-width: 100%;
+  box-sizing: border-box;
   word-break: break-word;
 }
+
+/* Animations */
+@keyframes fadeInTop {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
