@@ -107,4 +107,59 @@ nav ul li a {
   background-color: #005A9E;
 }
 
+/* Base Styles */
+.animated-header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0f172a; /* dark tech blue */
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animated Name Fade-in */
+.fade-in {
+  font-size: 42px;
+  font-weight: 700;
+  animation: fadeInTop 1.5s ease-out forwards;
+  opacity: 0;
+  color: #38bdf8; /* Sky blue */
+}
+
+/* Typing Animation */
+.typing {
+  font-size: 18px;
+  margin-top: 20px;
+  width: 22ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #38bdf8;
+  animation: typing 4s steps(40, end), blink 0.7s step-end infinite;
+}
+
+/* Animations */
+@keyframes fadeInTop {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
