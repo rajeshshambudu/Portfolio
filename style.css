@@ -129,12 +129,13 @@ nav ul li a {
 .typing {
   font-size: 18px;
   margin-top: 20px;
-  width: 22ch;
+  width: 90ch; /* Adjusted for full sentence */
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #38bdf8;
-  animation: typing 4s steps(40, end), blink 0.7s step-end infinite;
+  animation: typing 6s steps(90, end), blink 0.7s step-end infinite;
 }
+
 
 /* Animations */
 @keyframes fadeInTop {
