@@ -1,11 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shambudu Rajesh Kumar | Professional Portfolio</title>
+    
+    <title>Shambudu Rajesh Kumar | Azure DevOps, Civil Engineer & Music Producer</title>
+    <meta name="description" content="Official Portfolio of Shambudu Rajesh Kumar. Founder of Dream Ladders, specializing in Azure DevOps, Structural Civil Engineering, and Music Production.">
+    <meta name="keywords" content="Shambudu Rajesh Kumar, Dream Ladders, Azure DevOps Engineer, Civil Engineer, Music Producer, Nizamabad, FL Studio, AutoCAD, ETABS">
+    <meta name="author" content="Shambudu Rajesh Kumar">
+
+    <meta property="og:title" content="Shambudu Rajesh Kumar | Professional Portfolio">
+    <meta property="og:description" content="Exploring the intersection of engineering, code, and sound. Founder of Dream Ladders.">
+    <meta property="og:image" content="dreamladders.jpeg">
+    <meta property="og:url" content="https://rajeshshambudu.github.io/Portfolio/">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg: #0b0f1a;
@@ -24,6 +35,7 @@
             color: var(--text-main);
             line-height: 1.6;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
@@ -41,7 +53,7 @@
             background: rgba(11, 15, 26, 0.8);
             border-bottom: 1px solid var(--border);
         }
-        .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+        .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; color: #fff; text-decoration: none; }
         .nav-links { display: flex; align-items: center; gap: 2rem; }
         .nav-links a {
             color: var(--text-dim);
@@ -57,6 +69,7 @@
             padding: 0.5rem 1rem;
             border-radius: 8px;
             border: 1px solid var(--accent);
+            font-weight: 600;
         }
 
         /* --- HERO --- */
@@ -96,16 +109,16 @@
             border: 1px solid var(--border);
             padding: 2rem;
             border-radius: 24px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.4s;
         }
         .bento-card:hover { border-color: var(--accent); transform: scale(1.02); }
-        .bento-card h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; }
+        .bento-card h3 { font-size: 0.8rem; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; }
 
-        /* --- THE ECOSYSTEM (PROJECTS) --- */
-        .section-title { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+        /* --- ECOSYSTEM SECTION --- */
+        .section-title { font-size: 2rem; margin-bottom: 3rem; text-align: center; font-weight: 800; }
         .ecosystem-card {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 1fr;
             gap: 4rem;
             background: rgba(255,255,255,0.02);
             border: 1px solid var(--border);
@@ -114,7 +127,7 @@
             margin-bottom: 2rem;
             align-items: center;
         }
-        .link-group { display: flex; gap: 1.5rem; margin-top: 2rem; }
+        .link-group { display: flex; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
         .btn-main {
             background: var(--accent);
             color: var(--bg);
@@ -123,24 +136,23 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 0.9rem;
+            transition: 0.3s;
         }
+        .btn-main:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
         .btn-sub {
             color: var(--text-dim);
             text-decoration: none;
             font-size: 0.9rem;
+            font-weight: 600;
             border-bottom: 1px solid var(--text-dim);
+            transition: 0.3s;
         }
+        .btn-sub:hover { color: #fff; border-color: #fff; }
+
         .project-img { 
             width: 100%; border-radius: 20px; 
             box-shadow: 0 30px 60px rgba(0,0,0,0.5); 
             border: 1px solid var(--border);
-        }
-
-        /* --- MUSIC SECTION --- */
-        .music-section { text-align: center; padding: 100px 0; border-top: 1px solid var(--border); }
-        .video-container {
-            max-width: 315px; margin: 3rem auto; border-radius: 24px;
-            overflow: hidden; border: 6px solid var(--card-bg);
         }
 
         /* --- CONTACT --- */
@@ -150,7 +162,7 @@
             border: 1px solid var(--border); margin: 4rem 0;
         }
         .email-display {
-            font-size: clamp(1.2rem, 5vw, 2.5rem);
+            font-size: clamp(1rem, 5vw, 2.2rem);
             color: var(--text-main);
             text-decoration: none;
             font-weight: 800;
@@ -160,7 +172,7 @@
         }
         .email-display:hover { color: var(--accent); }
 
-        footer { padding: 4rem 0; text-align: center; color: var(--text-dim); font-size: 0.8rem; }
+        footer { padding: 4rem 0; text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); }
 
         @media (max-width: 768px) {
             .bento-grid, .ecosystem-card { grid-template-columns: 1fr; }
@@ -172,80 +184,83 @@
 <body>
 
     <div class="container">
-        <nav>
-            <div class="logo">RAJESH KUMAR</div>
+        <nav aria-label="Main Navigation">
+            <a href="https://rajeshshambudu.github.io/Portfolio/" class="logo">RAJESH KUMAR</a>
             <div class="nav-links">
-                <a href="#about">Philosophy</a>
-                <a href="#projects">Ecosystem</a>
-                <a href="#music">Sound</a>
+                <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank">Collaboration Hub</a>
                 <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-specialty">Civil Site →</a>
             </div>
         </nav>
 
-        <header id="about">
-            <div class="badge">Available for 2025 Projects</div>
-            <h1>The Engineering of <br> Code and Sound</h1>
-            <p class="hero-tagline">Bridging the gap between structural integrity, cloud scalability, and rhythmic creativity.</p>
-        </header>
+        <main>
+            <header>
+                <div class="badge">Portfolio Ecosystem 2025</div>
+                <h1>Shambudu Rajesh Kumar</h1>
+                <p class="hero-tagline">
+                    <strong>Azure DevOps Engineer</strong> | 
+                    <strong>Civil Engineer</strong> | 
+                    <strong>Music Producer</strong>
+                </p>
+            </header>
 
-        <section class="bento-grid">
-            <div class="bento-card">
-                <h3>Cloud / DevOps</h3>
-                <p>Scaling Azure environments and automating CI/CD pipelines.</p>
-            </div>
-            <div class="bento-card">
-                <h3>Civil Engineering</h3>
-                <p>Structural infrastructure design and engineering software.</p>
-            </div>
-            <div class="bento-card">
-                <h3>Creative Direction</h3>
-                <p>Full-scale music production and digital brand building.</p>
-            </div>
-        </section>
+            <section class="bento-grid" aria-label="Skills Summary">
+                <article class="bento-card">
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Azure DevOps, CI/CD pipelines, C#, and SQL Database management.</p>
+                </article>
+                <article class="bento-card">
+                    <h3>Civil Specialty</h3>
+                    <p>Structural engineering design, AutoCAD modeling, and ETABS analysis.</p>
+                </article>
+                <article class="bento-card">
+                    <h3>Music Production</h3>
+                    <p>FL Studio sound engineering, original beats, and creative direction.</p>
+                </article>
+            </section>
 
-        <h2 class="section-title">Dream Ladders Ecosystem</h2>
-        <section id="projects" class="ecosystem-card">
-            <div class="info">
-                <div class="badge" style="color:var(--accent-2)">Collaboration Hub</div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Multi-Disciplinary Solutions</h2>
-                <p style="color: var(--text-dim);">The central portal for projects merging Azure DevOps, Civil Engineering, and Music. This is where cross-industry innovation happens.</p>
-                
-                <div class="link-group">
-                    <a href="YOUR_COLLABORATION_HUB_LINK_HERE" target="_blank" class="btn-main">Launch Collaboration Hub</a>
-                    <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="btn-sub">Civil Specialty Site →</a>
+            <h2 class="section-title">The Dream Ladders Ecosystem</h2>
+            
+            <section class="ecosystem-card">
+                <div class="info">
+                    <div class="badge" style="color:var(--accent-2); border-color: var(--accent-2);">Venture Portal</div>
+                    <h2>Dream Ladders Hub</h2>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+                        The primary collaboration engine for multi-disciplinary projects. 
+                        Integrating <strong>engineering precision</strong> with <strong>digital scalability</strong>.
+                    </p>
+                    
+                    <div class="link-group">
+                        <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank" class="btn-main">Visit Collaboration Hub</a>
+                        <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="btn-sub">Civil Engineering Only →</a>
+                    </div>
                 </div>
-            </div>
-            <div class="visual">
-                <img src="dreamladders.jpeg" alt="Dream Ladders Ecosystem" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/161e2e/ffffff?text=Dream+Ladders+Ecosystem'">
-            </div>
-        </section>
+                <div class="visual">
+                    <img src="dreamladders.jpeg" alt="Dream Ladders Brand Portfolio" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/161e2e/ffffff?text=Dream+Ladders'">
+                </div>
+            </section>
 
-        <section id="music" class="music-section">
-            <h2 class="section-title">The Sound Lab</h2>
-            <p style="color: var(--text-dim);">Exploring rhythm and engineering through FL Studio.</p>
-            <div class="video-container">
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/wntoVH2GGF4" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section class="contact-box">
-            <h2>Start a Conversation</h2>
-            <p style="color: var(--text-dim);">Ready to build something extraordinary?</p>
-            
-            <a href="mailto:your-email@example.com" class="email-display">your-email@example.com</a>
-            
-            <p style="font-size: 0.9rem; color: var(--accent);">Direct Email • Project Inquiries • Collaborations</p>
-        </section>
+            <section class="contact-box">
+                <h2>Direct Collaboration</h2>
+                <p style="color: var(--text-dim);">For business inquiries, project deployments, or creative sessions:</p>
+                
+                <a href="mailto: shambudurajesh05@gmail.com" class="email-display">shambudurajesh05@gmail.com</a>
+                
+                <p style="font-size: 0.9rem; color: var(--accent);">Nizamabad • Remote • Worldwide</p>
+            </section>
+        </main>
 
         <footer>
             <p>© 2025 Shambudu Rajesh Kumar</p>
-            <p style="font-size: 0.7rem; margin-top: 10px; color: #444;">Azure DevOps | Civil Engineering | Music Production</p>
+            <div style="margin-top: 15px;">
+                <a href="https://rajeshshambudu.github.io/Portfolio/" style="color:var(--accent); text-decoration:none; margin: 0 10px;">Portfolio</a>
+                <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" style="color:var(--text-dim); text-decoration:none; margin: 0 10px;">Hub</a>
+                <a href="https://rajeshshambudu.github.io/dreamladders/" style="color:var(--text-dim); text-decoration:none; margin: 0 10px;">Civil</a>
+            </div>
         </footer>
     </div>
 
     <script>
-        // Simple Reveal Effect
-        const observerOptions = { threshold: 0.1 };
+        // Reveal Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -253,7 +268,7 @@
                     entry.target.style.transform = "translateY(0)";
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.bento-card, .ecosystem-card, .contact-box').forEach(el => {
             el.style.opacity = "0";
