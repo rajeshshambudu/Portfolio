@@ -1,325 +1,171 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shambudu Rajesh Kumar | Tech-Savvy Creator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        /* --- CSS VARIABLES --- */
-        :root {
-            --bg: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --accent: #38bdf8; /* Azure Blue */
-            --accent-2: #818cf8; /* Music Purple */
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shambudu Rajesh Kumar | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0f1a;
+            --card-bg: rgba(22, 30, 46, 0.8);
+            --accent: #38bdf8; /* Azure Blue */
+            --accent-2: #c084fc; /* Creative Purple */
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
 
-        /* --- RESET & BASE --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-        /* --- NAVIGATION --- */
-        nav {
-            padding: 1.5rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-        }
-        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent); }
-        .cta-pill {
-            background: var(--accent);
-            color: var(--bg) !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-        }
-
-        /* --- HERO SECTION --- */
-        header {
-            padding: 8rem 0 4rem;
-            text-align: center;
-        }
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            background: linear-gradient(to right, var(--accent), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-        .typing {
-            font-size: clamp(1rem, 3vw, 1.25rem);
-            color: var(--text-dim);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-
-        /* --- BENTO GRID SKILLS --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 4rem 0;
-        }
-        .skill-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            border-radius: 24px;
-            transition: transform 0.3s;
-        }
-        .skill-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .skill-card h3 { color: var(--accent); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; }
-
-        /* --- PROJECTS SECTION --- */
-        .project-section { margin: 6rem 0; }
-        .project-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            background: var(--glass);
-            border-radius: 32px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            align-items: center;
-            border: 1px solid var(--border);
-        }
-        .project-info h2 { font-size: 2rem; margin-bottom: 1rem; }
-        .project-img { width: 100%; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-
-        /* --- MUSIC SECTION (SHORTS) --- */
-        .music-grid {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(transparent, rgba(129, 140, 248, 0.05), transparent);
-        }
-        .video-wrapper {
-            max-width: 315px;
-            margin: 2rem auto;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 4px solid var(--border);
-        }
-
-        /* --- FOOTER & CONTACT --- */
-        .cta-footer {
-            text-align: center;
-            padding: 6rem 0;
-            background: var(--accent);
-            color: var(--bg);
-            border-radius: 40px;
-            margin-bottom: 2rem;
-        }
-        .cta-footer h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .project-card { grid-template-columns: 1fr; padding: 1.5rem; }
-            nav .nav-links { display: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <nav>
-            <div class="logo">RAJESH KUMAR</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#music">Music</a>
-                <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-pill">Dream Ladders</a>
-            </div>
-        </nav>
-
-        <header>
-            <h1>Shambudu Rajesh Kumar</h1>
-            <p class="typing">Azure DevOps • Civil Engineer • Music Producer</p>
-        </header>
-
-        <section id="skills" class="skills-grid">
-            <div class="skill-card">
-                <h3>Cloud Infrastructure</h3>
-                <p>Azure DevOps, MS Azure, CI/CD Pipelines</p>
-            </div>
-            <div class="skill-card">
-                <h3>Development</h3>
-                <p>SQL, C#, HTML5, CSS3, Modern Web Tech</p>
-            </div>
-            <div class="skill-card">
-                <h3>Civil Engineering</h3>
-                <p>AutoCAD, ETABS, Structural Design</p>
-            </div>
-            <div class="skill-card">
-                <h3>Creative Arts</h3>
-                <p>FL Studio, Beat Making, Sound Engineering</p>
-            </div>
-        </section>
-
-        <section id="projects" class="project-section">
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>Dream Ladders</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Founder & Sole Proprietor</p>
-                    <p>Dream Ladders is where engineering meets digital innovation. I deliver end-to-end infrastructure solutions, from structural design to cloud-based deployments.</p>
-                </div>
-                <div class="project-visual">
-                    <img src="dreamladders.jpeg" alt="Dream Ladders Project" class="project-img" onerror="this.src='https://via.placeholder.com/500x300?text=Dream+Ladders'">
-                </div>
-            </div>
-        </section>
-
-        <section id="music" class="music-grid">
-            <h2>The Sound Lab</h2>
-            <p>Original Rap & Beats produced in FL Studio</p>
-            <div class="video-wrapper">
-                <iframe width="315" height="560" 
-                    src="https://www.youtube.com/embed/wntoVH2GGF4" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-        <section id="lets-build-together" class="cta-footer">
-            <h2>Let’s Build Together</h2>
-            <p>Currently open to collaborations in Tech, Civil Engineering, and Music.</p>
-            <br>
-            <a href="mailto:your-email@example.com" style="text-decoration:none; color:inherit; font-weight:bold; border-bottom: 2px solid black;">Get In Touch →</a>
-        </section>
-
-        <footer>
-            <p>© 2025 Shambudu Rajesh Kumar • Powered by Innovation</p>
-        </footer>
-    </div>
-
-    <script>
-        // Simple Scroll Reveal Animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        document.querySelectorAll('.skill-card, .project-card').forEach((el) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            background: var(--glass);
-            border-radius: 32px;
-            padding: 3rem;
-            margin-bottom: 2rem;
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            border: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(15px);
+            background: rgba(11, 15, 26, 0.8);
+            border-bottom: 1px solid var(--border);
         }
-        .project-info h2 { font-size: 2rem; margin-bottom: 1rem; }
-        .project-img { width: 100%; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .cta-specialty {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent) !important;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent);
+        }
 
-        /* --- MUSIC SECTION --- */
-        .music-grid {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(transparent, rgba(129, 140, 248, 0.05), transparent);
-        }
-        .video-wrapper {
-            max-width: 315px;
-            margin: 2rem auto;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 4px solid var(--border);
-        }
-
-        /* --- UPDATED CONTACT SECTION --- */
-        .contact-section {
-            text-align: center;
-            padding: 6rem 2rem;
-            background: var(--glass);
+        /* --- HERO --- */
+        header { padding: 120px 0 80px; text-align: center; }
+        .badge {
+            background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 40px;
-            margin: 4rem 0;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
-        .contact-section h2 { 
-            font-size: 2.5rem; 
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, var(--accent), var(--accent-2));
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            background: linear-gradient(to bottom right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
-        .email-link {
-            font-size: clamp(1.1rem, 4vw, 2.2rem);
-            color: var(--text-main);
+        .hero-tagline { font-size: 1.2rem; color: var(--text-dim); max-width: 650px; margin: 0 auto; }
+
+        /* --- BENTO SKILLS --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 6rem;
+        }
+        .bento-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 24px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-card:hover { border-color: var(--accent); transform: scale(1.02); }
+        .bento-card h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; }
+
+        /* --- THE ECOSYSTEM (PROJECTS) --- */
+        .section-title { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+        .ecosystem-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 4rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .link-group { display: flex; gap: 1.5rem; margin-top: 2rem; }
+        .btn-main {
+            background: var(--accent);
+            color: var(--bg);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            display: block;
+            font-size: 0.9rem;
+        }
+        .btn-sub {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--text-dim);
+        }
+        .project-img { 
+            width: 100%; border-radius: 20px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5); 
+            border: 1px solid var(--border);
+        }
+
+        /* --- MUSIC SECTION --- */
+        .music-section { text-align: center; padding: 100px 0; border-top: 1px solid var(--border); }
+        .video-container {
+            max-width: 315px; margin: 3rem auto; border-radius: 24px;
+            overflow: hidden; border: 6px solid var(--card-bg);
+        }
+
+        /* --- CONTACT --- */
+        .contact-box {
+            background: linear-gradient(145deg, #161e2e, #0b0f1a);
+            padding: 6rem 2rem; border-radius: 40px; text-align: center;
+            border: 1px solid var(--border); margin: 4rem 0;
+        }
+        .email-display {
+            font-size: clamp(1.2rem, 5vw, 2.5rem);
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 800;
             margin: 2rem 0;
-            transition: 0.3s ease;
+            display: block;
+            transition: 0.3s;
         }
-        .email-link:hover {
-            color: var(--accent);
-            transform: scale(1.02);
-        }
-        .contact-subtext {
-            color: var(--text-dim);
-            font-size: 1rem;
-            max-width: 500px;
-            margin: 0 auto;
-        }
+        .email-display:hover { color: var(--accent); }
 
-        footer {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-            border-top: 1px solid var(--border);
-        }
+        footer { padding: 4rem 0; text-align: center; color: var(--text-dim); font-size: 0.8rem; }
 
-        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .project-card { grid-template-columns: 1fr; padding: 1.5rem; }
-            nav .nav-links { display: none; }
+            .bento-grid, .ecosystem-card { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .ecosystem-card { padding: 2rem; }
         }
     </style>
 </head>
@@ -329,94 +175,90 @@
         <nav>
             <div class="logo">RAJESH KUMAR</div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Work</a>
-                <a href="#music">Music</a>
-                <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-pill">Dream Ladders</a>
+                <a href="#about">Philosophy</a>
+                <a href="#projects">Ecosystem</a>
+                <a href="#music">Sound</a>
+                <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-specialty">Civil Site →</a>
             </div>
         </nav>
 
         <header id="about">
-            <h1>Shambudu Rajesh Kumar</h1>
-            <p class="tagline">Azure DevOps • Civil Engineer • Music Producer</p>
+            <div class="badge">Available for 2025 Projects</div>
+            <h1>The Engineering of <br> Code and Sound</h1>
+            <p class="hero-tagline">Bridging the gap between structural integrity, cloud scalability, and rhythmic creativity.</p>
         </header>
 
-        <section id="skills" class="skills-grid">
-            <div class="skill-card">
-                <h3>Cloud Infrastructure</h3>
-                <p>Azure DevOps, MS Azure, CI/CD Pipelines</p>
+        <section class="bento-grid">
+            <div class="bento-card">
+                <h3>Cloud / DevOps</h3>
+                <p>Scaling Azure environments and automating CI/CD pipelines.</p>
             </div>
-            <div class="skill-card">
-                <h3>Development</h3>
-                <p>SQL, C#, HTML5, CSS3, Modern Web Tech</p>
-            </div>
-            <div class="skill-card">
+            <div class="bento-card">
                 <h3>Civil Engineering</h3>
-                <p>AutoCAD, ETABS, Structural Design</p>
+                <p>Structural infrastructure design and engineering software.</p>
             </div>
-            <div class="skill-card">
-                <h3>Creative Arts</h3>
-                <p>FL Studio Production & Sound Engineering</p>
+            <div class="bento-card">
+                <h3>Creative Direction</h3>
+                <p>Full-scale music production and digital brand building.</p>
             </div>
         </section>
 
-        <section id="projects" class="project-section">
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>Dream Ladders</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Founder & Sole Proprietor</p>
-                    <p>Dream Ladders is where engineering meets digital innovation. I deliver end-to-end infrastructure solutions, from structural design to cloud-based deployments.</p>
-                    <br>
-                    <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">Visit Dream Ladders Website →</a>
+        <h2 class="section-title">Dream Ladders Ecosystem</h2>
+        <section id="projects" class="ecosystem-card">
+            <div class="info">
+                <div class="badge" style="color:var(--accent-2)">Collaboration Hub</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Multi-Disciplinary Solutions</h2>
+                <p style="color: var(--text-dim);">The central portal for projects merging Azure DevOps, Civil Engineering, and Music. This is where cross-industry innovation happens.</p>
+                
+                <div class="link-group">
+                    <a href="YOUR_COLLABORATION_HUB_LINK_HERE" target="_blank" class="btn-main">Launch Collaboration Hub</a>
+                    <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="btn-sub">Civil Specialty Site →</a>
                 </div>
-                <div class="project-visual">
-                    <img src="dreamladders.jpeg" alt="Dream Ladders" class="project-img" onerror="this.src='https://via.placeholder.com/500x300?text=Dream+Ladders'">
-                </div>
+            </div>
+            <div class="visual">
+                <img src="dreamladders.jpeg" alt="Dream Ladders Ecosystem" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/161e2e/ffffff?text=Dream+Ladders+Ecosystem'">
             </div>
         </section>
 
-        <section id="music" class="music-grid">
-            <h2>The Sound Lab</h2>
-            <p>Original Rap & Beats produced in FL Studio</p>
-            <div class="video-wrapper">
-                <iframe width="315" height="560" 
-                    src="https://www.youtube.com/embed/wntoVH2GGF4" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+        <section id="music" class="music-section">
+            <h2 class="section-title">The Sound Lab</h2>
+            <p style="color: var(--text-dim);">Exploring rhythm and engineering through FL Studio.</p>
+            <div class="video-container">
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/wntoVH2GGF4" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2>Get In Touch</h2>
-            <p class="contact-subtext">Whether it's for a cloud project, civil engineering consultation, or music collaboration, my inbox is always open.</p>
+        <section class="contact-box">
+            <h2>Start a Conversation</h2>
+            <p style="color: var(--text-dim);">Ready to build something extraordinary?</p>
             
-            <a href="mailto: shambudurajesh05@gmail.com" class="email-link">shambudurajesh05@gmail.com</a>
+            <a href="mailto:your-email@example.com" class="email-display">your-email@example.com</a>
             
-            <p class="contact-subtext">Click the link above to send me a direct email.</p>
+            <p style="font-size: 0.9rem; color: var(--accent);">Direct Email • Project Inquiries • Collaborations</p>
         </section>
 
         <footer>
-            <p>© 2025 Shambudu Rajesh Kumar • Built for Innovation</p>
+            <p>© 2025 Shambudu Rajesh Kumar</p>
+            <p style="font-size: 0.7rem; margin-top: 10px; color: #444;">Azure DevOps | Civil Engineering | Music Production</p>
         </footer>
     </div>
 
     <script>
+        // Simple Reveal Effect
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
                 }
             });
-        }, { threshold: 0.1 });
+        }, observerOptions);
 
-        document.querySelectorAll('.skill-card, .project-card, .contact-section').forEach((el) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
+        document.querySelectorAll('.bento-card, .ecosystem-card, .contact-box').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s ease-out";
             observer.observe(el);
         });
     </script>
