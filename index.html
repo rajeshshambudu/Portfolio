@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Shambudu Rajesh Kumar | Azure DevOps, Civil Engineer & Music Producer</title>
-    <meta name="description" content="Official Portfolio of Shambudu Rajesh Kumar. Founder of Dream Ladders, specializing in Azure DevOps, Structural Civil Engineering, and Music Production.">
-    <meta name="keywords" content="Shambudu Rajesh Kumar, Dream Ladders, Azure DevOps Engineer, Civil Engineer, Music Producer, Nizamabad, FL Studio, AutoCAD, ETABS">
-    <meta name="author" content="Shambudu Rajesh Kumar">
-
-    <meta property="og:title" content="Shambudu Rajesh Kumar | Professional Portfolio">
-    <meta property="og:description" content="Exploring the intersection of engineering, code, and sound. Founder of Dream Ladders.">
-    <meta property="og:image" content="dreamladders.jpeg.jpeg">
-    <meta property="og:url" content="https://rajeshshambudu.github.io/Portfolio/">
-    <meta property="og:type" content="website">
-
+    <meta name="description" content="Official Portfolio of Shambudu Rajesh Kumar. Founder of Dream Ladders.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -127,7 +120,6 @@
             margin-bottom: 2rem;
             align-items: center;
         }
-        .link-group { display: flex; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
         .btn-main {
             background: var(--accent);
             color: var(--bg);
@@ -139,23 +131,57 @@
             transition: 0.3s;
         }
         .btn-main:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
-        .btn-sub {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-bottom: 1px solid var(--text-dim);
+
+        /* --- CHAT WIDGET STYLES --- */
+        .chat-widget-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+        }
+        .chat-window {
+            width: 350px;
+            height: 500px;
+            background: #0f172a;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            margin-bottom: 15px;
+        }
+        .chat-window.active { display: flex; animation: slideUp 0.3s ease-out; }
+        .chat-header {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chat-bubble {
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+            float: right;
             transition: 0.3s;
         }
-        .btn-sub:hover { color: #fff; border-color: #fff; }
+        .chat-bubble:hover { transform: scale(1.1); }
+        #chat-iframe { width: 100%; height: 100%; border: none; }
 
-        .project-img { 
-            width: 100%; border-radius: 20px; 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5); 
-            border: 1px solid var(--border);
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- CONTACT --- */
+        /* --- CONTACT & FOOTER --- */
         .contact-box {
             background: linear-gradient(145deg, #161e2e, #0b0f1a);
             padding: 6rem 2rem; border-radius: 40px; text-align: center;
@@ -166,40 +192,22 @@
             color: var(--text-main);
             text-decoration: none;
             font-weight: 800;
-            margin: 2rem 0;
             display: block;
-            transition: 0.3s;
+            margin: 2rem 0;
         }
-        .email-display:hover { color: var(--accent); }
-
-        footer { padding: 4rem 0; text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); }
+        footer { padding: 4rem 0; text-align: center; color: var(--text-dim); border-top: 1px solid var(--border); }
 
         @media (max-width: 768px) {
             .bento-grid, .ecosystem-card { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-            .ecosystem-card { padding: 2rem; }
+            .chat-window { width: calc(100vw - 40px); right: -10px; }
         }
-           .title {
-        text-align: center;
-        font-size: 48px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        line-height: 1.2;
-        background: linear-gradient(
-            180deg,
-            #BFDDF2 0%,
-            #84B8E0 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <nav aria-label="Main Navigation">
-            <a href="https://rajeshshambudu.github.io/Portfolio/" class="logo">RAJESH KUMAR</a>
+        <nav>
+            <a href="#" class="logo">RAJESH KUMAR</a>
             <div class="nav-links">
                 <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank">Collaboration Hub</a>
                 <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-specialty">Civil Site →</a>
@@ -211,13 +219,11 @@
                 <div class="badge">Portfolio Ecosystem 2025</div>
                 <h1>Shambudu Rajesh Kumar</h1>
                 <p class="hero-tagline">
-                    <strong>Azure DevOps Engineer</strong> | 
-                    <strong>Civil Engineer</strong> | 
-                    <strong>Music Producer</strong>
+                    <strong>Azure DevOps Engineer</strong> | <strong>Civil Engineer</strong> | <strong>Music Producer</strong>
                 </p>
             </header>
 
-            <section class="bento-grid" aria-label="Skills Summary">
+            <section class="bento-grid">
                 <article class="bento-card">
                     <h3>Cloud Infrastructure</h3>
                     <p>Azure DevOps, CI/CD pipelines, C#, and SQL Database management.</p>
@@ -232,53 +238,50 @@
                 </article>
             </section>
 
-            <h2 class="section-title">The Dream Ladders Ecosystem</h2>
-            
+            <h2 class="section-title">Dream Ladders Ecosystem</h2>
             <section class="ecosystem-card">
                 <div class="info">
                     <div class="badge" style="color:var(--accent-2); border-color: var(--accent-2);">Venture Portal</div>
-                    <h2>Dream Ladders Hub</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
-                        The primary collaboration engine for multi-disciplinary projects. 
-                        Integrating <strong>engineering precision</strong> with <strong>digital scalability</strong>.
-                    </p>
-                    
-                    <div class="link-group">
-                        <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank" class="btn-main">Visit Collaboration Hub</a>
-                        <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="btn-sub">Civil Engineering Only →</a>
-                    </div>
+                    <h2>The Hub</h2>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Integrating engineering precision with digital scalability.</p>
+                    <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank" class="btn-main">Visit Hub</a>
                 </div>
                 <div class="visual">
-                    <img src="dreamladders.jpeg.jpeg" alt="Dream Ladders Brand Portfolio" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/161e2e/ffffff?text=Dream+Ladders'">
+                    <img src="dreamladders.jpeg.jpeg" alt="Dream Ladders" style="width:100%; border-radius:20px; border:1px solid var(--border);" onerror="this.src='https://via.placeholder.com/400x300/161e2e/ffffff?text=Dream+Ladders'">
                 </div>
             </section>
 
-            
-
-            
-
-
             <section class="contact-box">
                 <h2>Direct Collaboration</h2>
-                <p style="color: var(--text-dim);">For business inquiries, project deployments, or creative sessions:</p>
-                
-                <a href="mailto: shambudurajesh05@gmail.com" class="email-display">shambudurajesh05@gmail.com</a>
-                
-                <p style="font-size: 0.9rem; color: var(--accent);">Nizamabad • Remote • Worldwide</p>
+                <a href="mailto:shambudurajesh05@gmail.com" class="email-display">shambudurajesh05@gmail.com</a>
+                <p style="color: var(--accent);">Nizamabad • Remote • Worldwide</p>
             </section>
         </main>
 
         <footer>
             <p>© 2025 Shambudu Rajesh Kumar</p>
-            <div style="margin-top: 15px;">
-                <a href="https://rajeshshambudu.github.io/Portfolio/" style="color:var(--accent); text-decoration:none; margin: 0 10px;">Portfolio</a>
-                <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" style="color:var(--text-dim); text-decoration:none; margin: 0 10px;">Hub</a>
-                <a href="https://rajeshshambudu.github.io/dreamladders/" style="color:var(--text-dim); text-decoration:none; margin: 0 10px;">Civil</a>
-            </div>
         </footer>
     </div>
 
+    <div class="chat-widget-wrapper">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span style="font-weight: 600; font-size: 0.9rem;">Dream Ladders Chat</span>
+                <button onclick="toggleChat()" style="background:none; border:none; color:white; cursor:pointer;">✕</button>
+            </div>
+            <iframe src="https://rajeshshambudu.github.io/Chat/" id="chat-iframe"></iframe>
+        </div>
+        <div class="chat-bubble" onclick="toggleChat()">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b0f1a" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+    </div>
+
     <script>
+        // Toggle Chat
+        function toggleChat() {
+            document.getElementById('chatWindow').classList.toggle('active');
+        }
+
         // Reveal Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
