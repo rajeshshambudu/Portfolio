@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,8 @@
     
     <title>Shambudu Rajesh Kumar | Azure DevOps, Civil Engineer & Music Producer</title>
     <meta name="description" content="Official Portfolio of Shambudu Rajesh Kumar. Founder of Dream Ladders.">
+    
+    <link rel="icon" type="image/jpeg" href="https://rajeshshambudu.github.io/Portfolio/dreamladders.jpeg.jpeg">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
@@ -17,7 +18,7 @@
             --accent: #38bdf8; /* Azure Blue */
             --accent-2: #c084fc; /* Creative Purple */
             --accent-eng: #10b981; /* Engineering Green */
-            --accent-tel: #fbbf24; /* Telangana Gold/Amber */
+            --accent-tsls: #f97316; /* TSLS Orange */
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
             --border: rgba(255, 255, 255, 0.08);
@@ -121,7 +122,6 @@
             padding: 4rem;
             margin-bottom: 2.5rem;
             align-items: center;
-            overflow: hidden;
         }
         .btn-main {
             background: var(--accent);
@@ -170,7 +170,7 @@
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Hide complex nav on mobile for space */
+            .nav-links { display: none; }
             .bento-grid, .ecosystem-card { grid-template-columns: 1fr; padding: 2rem; }
             .ecosystem-card { gap: 2rem; }
             .visual { order: -1 !important; }
@@ -183,7 +183,7 @@
         <nav>
             <a href="#" class="logo">RAJESH KUMAR</a>
             <div class="nav-links">
-                <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank">Telangana Portal</a>
+                <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank">Surveyor Directory</a>
                 <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank">Collaboration Hub</a>
                 <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-specialty">Civil Site →</a>
             </div>
@@ -215,29 +215,32 @@
 
             <h2 class="section-title">Ecosystem Projects</h2>
             
+            <section class="ecosystem-card" style="border-left: 4px solid var(--accent-tsls);">
+                <div class="info">
+                    <div class="badge" style="color:var(--accent-tsls); border-color: var(--accent-tsls);">Community Portal</div>
+                    <h2>TSLS Directory</h2>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+                        A professional directory for Telangana State Licensed Surveyors. Features live Google Sheets integration, district-wise filtering, and QR-code verification for registered members.
+                    </p>
+                    <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank" class="btn-main" style="background:var(--accent-tsls); color: #fff;">Launch Directory</a>
+                </div>
+                <div class="visual">
+                    <div style="background: #002147; padding: 20px; border-radius: 20px; text-align: center; border: 1px solid var(--border);">
+                        <i class="fas fa-map-location-dot" style="font-size: 80px; color: #fff; margin-bottom: 15px;"></i>
+                        <p style="font-weight: 800; color: #fff; letter-spacing: 1px;">TSLS VERIFIED</p>
+                    </div>
+                </div>
+            </section>
+
             <section class="ecosystem-card">
+                <div class="visual" style="order: -1;">
+                    <img src="dreamladders.jpeg.jpeg" alt="Dream Ladders" style="width:100%; border-radius:20px; border:1px solid var(--border);" onerror="this.src='https://via.placeholder.com/400x300/161e2e/ffffff?text=Dream+Ladders'">
+                </div>
                 <div class="info">
                     <div class="badge" style="color:var(--accent-2); border-color: var(--accent-2);">Venture Portal</div>
                     <h2>The Hub</h2>
                     <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Integrating engineering precision with digital scalability. The core of my professional brand.</p>
                     <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank" class="btn-main">Visit Hub</a>
-                </div>
-                <div class="visual">
-                    <img src="dreamladders.jpeg.jpeg" alt="Dream Ladders" style="width:100%; border-radius:20px; border:1px solid var(--border);" onerror="this.src='https://via.placeholder.com/400x300/161e2e/ffffff?text=Dream+Ladders'">
-                </div>
-            </section>
-
-            <section class="ecosystem-card" style="border-color: rgba(251, 191, 36, 0.2);">
-                <div class="visual">
-                    <img src="https://via.placeholder.com/400x300/161e2e/fbbf24?text=Telangana+Portal" alt="Telangana Project" style="width:100%; border-radius:20px; border:1px solid var(--border);">
-                </div>
-                <div class="info">
-                    <div class="badge" style="color:var(--accent-tel); border-color: var(--accent-tel);">Cultural Identity</div>
-                    <h2>Telangana Heritage</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
-                        A digital tribute to the rich history and modern progress of Telangana. Designed for seamless navigation and storytelling.
-                    </p>
-                    <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank" class="btn-main" style="background:var(--accent-tel); color: #000;">Explore Portal →</a>
                 </div>
             </section>
 
@@ -250,8 +253,9 @@
                     </p>
                     <a href="https://rajeshshambudu.github.io/IS456-2000/" target="_blank" class="btn-main" style="background:var(--accent-eng);">Launch Tool →</a>
                 </div>
-                <div class="visual">
-                    </div>
+                <div class="visual" style="text-align: center; opacity: 0.5;">
+                    <i class="fas fa-calculator" style="font-size: 100px;"></i>
+                </div>
             </section>
 
             <section class="contact-box">
@@ -271,7 +275,7 @@
                     <h4 style="font-size: 14px; margin-bottom: 10px;">Navigation</h4>
                     <ul style="list-style: none; font-size: 13px; line-height: 2;">
                         <li><a href="https://rajeshshambudu.github.io/Portfolio/" style="color: var(--text-dim); text-decoration: none;">👤 Portfolio</a></li>
-                        <li><a href="https://rajeshshambudu.github.io/telangana.com/index.html" style="color: var(--text-dim); text-decoration: none;">🏛️ Telangana Portal</a></li>
+                        <li><a href="https://rajeshshambudu.github.io/telangana.com/index.html" style="color: var(--text-dim); text-decoration: none;">🔍 Surveyor Directory</a></li>
                         <li><a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" style="color: var(--text-dim); text-decoration: none;">🏢 Business Brand</a></li>
                         <li><a href="https://rajeshshambudu.github.io/IS456-2000/" style="color: var(--text-dim); text-decoration: none;">🧮 Design Tool</a></li>
                     </ul>
@@ -281,7 +285,7 @@
                 </div>
             </div>
         </footer>
-        </div>
+    </div>
 
     <div class="chat-widget-wrapper">
         <div class="chat-window" id="chatWindow">
@@ -296,6 +300,7 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <script>
         function toggleChat() {
             document.getElementById('chatWindow').classList.toggle('active');
