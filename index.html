@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Shambudu Rajesh Kumar | Azure DevOps, Civil Engineer & Music Producer</title>
-    <meta name="description" content="Official Portfolio of Shambudu Rajesh Kumar. Founder of Dream Ladders.">
+    <title>Shambudu Rajesh Kumar | Portfolio Ecosystem 2026</title>
+    <meta name="description" content="Official Portfolio of Shambudu Rajesh Kumar. Azure DevOps Engineer, Civil Engineer, and Founder of Dream Ladders.">
     
     <link rel="icon" type="image/jpeg" href="https://rajeshshambudu.github.io/Portfolio/dreamladders.jpeg.jpeg">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         :root {
             --bg: #0b0f1a;
             --card-bg: rgba(22, 30, 46, 0.8);
-            --accent: #38bdf8; /* Azure Blue */
-            --accent-2: #c084fc; /* Creative Purple */
-            --accent-eng: #10b981; /* Engineering Green */
-            --accent-tsls: #f97316; /* TSLS Orange */
+            --accent: #38bdf8;
+            --accent-2: #c084fc;
+            --accent-eng: #10b981;
+            --accent-tsls: #f97316;
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
             --border: rgba(255, 255, 255, 0.08);
@@ -91,7 +91,7 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
-        .hero-tagline { font-size: 1.2rem; color: var(--text-dim); max-width: 650px; margin: 0 auto; }
+        .hero-tagline { font-size: 1.2rem; color: var(--text-dim); max-width: 750px; margin: 0 auto; }
 
         /* --- BENTO SKILLS --- */
         .bento-grid {
@@ -110,7 +110,7 @@
         .bento-card:hover { border-color: var(--accent); transform: scale(1.02); }
         .bento-card h3 { font-size: 0.8rem; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; }
 
-        /* --- ECOSYSTEM SECTION --- */
+        /* --- ECOSYSTEM CARDS --- */
         .section-title { font-size: 2rem; margin: 6rem 0 3rem; text-align: center; font-weight: 800; }
         .ecosystem-card {
             display: grid;
@@ -123,7 +123,6 @@
             margin-bottom: 2.5rem;
             align-items: center;
             position: relative;
-            overflow: hidden;
         }
         .btn-main {
             background: var(--accent);
@@ -138,7 +137,6 @@
         }
         .btn-main:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
 
-        /* --- CONTACT BOX --- */
         .contact-box {
             background: linear-gradient(145deg, #161e2e, #0b0f1a);
             padding: 6rem 2rem; border-radius: 40px; text-align: center;
@@ -167,14 +165,10 @@
             display: flex; align-items: center; justify-content: center; cursor: pointer;
             box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4); transition: 0.3s;
         }
-        #chat-iframe { width: 100%; height: 100%; border: none; }
-
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .bento-grid, .ecosystem-card { grid-template-columns: 1fr; padding: 2rem; }
-            .ecosystem-card { gap: 2rem; }
             .visual { order: -1 !important; }
         }
     </style>
@@ -182,35 +176,39 @@
 <body>
 
     <div class="container">
-        <nav>
+        <nav data-aos="fade-down">
             <a href="#" class="logo">RAJESH KUMAR</a>
             <div class="nav-links">
-                <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank">Surveyor Directory</a>
                 <a href="https://rajeshshambudu.github.io/Landing/" target="_blank">Services</a>
-                <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank">Collaboration Hub</a>
+                <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank">Surveyor Directory</a>
+                <a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" target="_blank">The Hub</a>
                 <a href="https://rajeshshambudu.github.io/dreamladders/" target="_blank" class="cta-specialty">Civil Site →</a>
             </div>
         </nav>
 
         <main>
             <header>
-                <div class="badge">Portfolio Ecosystem 2026</div>
-                <h1>Shambudu Rajesh Kumar</h1>
-                <p class="hero-tagline">
-                    <strong>Azure DevOps Engineer</strong> | <strong>Civil Engineer</strong> | <strong>Music Producer</strong>
+                <div class="badge" data-aos="fade-down">The 2026 Portfolio Ecosystem</div>
+                <h1 data-aos="fade-up">Shambudu Rajesh Kumar</h1>
+                <p class="hero-tagline" data-aos="fade-up" data-aos-delay="100">
+                    A multi-disciplinary <strong>Engineering Ecosystem</strong> where technical precision meets digital automation. 
+                    Bridging the gap between <strong>Azure DevOps</strong>, <strong>Civil Structures</strong>, and <strong>Creative Production</strong>.
                 </p>
+                <div style="margin-top: 2rem;" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#services" class="btn-main" style="background: transparent; border: 1px solid var(--accent); color: var(--accent);">Explore the System ↓</a>
+                </div>
             </header>
 
-            <section class="bento-grid">
-                <article class="bento-card">
+            <section id="services" class="bento-grid">
+                <article class="bento-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>Cloud Infrastructure</h3>
                     <p>Azure DevOps, CI/CD pipelines, C#, and SQL Database management.</p>
                 </article>
-                <article class="bento-card">
+                <article class="bento-card" data-aos="fade-up" data-aos-delay="200">
                     <h3>Civil Specialty</h3>
                     <p>Structural engineering design, AutoCAD modeling, and ETABS analysis.</p>
                 </article>
-                <article class="bento-card">
+                <article class="bento-card" data-aos="fade-up" data-aos-delay="300">
                     <h3>Music Production</h3>
                     <p>FL Studio sound engineering, original beats, and creative direction.</p>
                 </article>
@@ -218,24 +216,22 @@
 
             <h2 class="section-title">Ecosystem Projects</h2>
             
-            <section class="ecosystem-card" style="border-left: 4px solid var(--accent-tsls);">
+            <section class="ecosystem-card" style="border-left: 4px solid var(--accent-tsls);" data-aos="fade-right">
                 <div class="info">
                     <div class="badge" style="color:var(--accent-tsls); border-color: var(--accent-tsls);">Community Portal</div>
                     <h2>TSLS Directory</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
-                        A professional directory for Telangana State Licensed Surveyors. Features live Google Sheets integration, district-wise filtering, and QR-code verification.
-                    </p>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">A professional directory for Telangana State Licensed Surveyors. Features live Google Sheets integration and district-wise filtering.</p>
                     <a href="https://rajeshshambudu.github.io/telangana.com/index.html" target="_blank" class="btn-main" style="background:var(--accent-tsls); color: #fff;">Launch Directory</a>
                 </div>
                 <div class="visual">
                     <div style="background: #002147; padding: 20px; border-radius: 20px; text-align: center; border: 1px solid var(--border);">
-                        <i class="fas fa-map-location-dot" style="font-size: 80px; color: #fff; margin-bottom: 15px;"></i>
+                        <i class="fas fa-map-location-dot" style="font-size: 60px; color: #fff; margin-bottom: 15px;"></i>
                         <p style="font-weight: 800; color: #fff; letter-spacing: 1px;">TSLS VERIFIED</p>
                     </div>
                 </div>
             </section>
 
-            <section class="ecosystem-card">
+            <section class="ecosystem-card" data-aos="fade-left">
                 <div class="visual" style="order: -1;">
                     <img src="dreamladders.jpeg.jpeg" alt="Dream Ladders" style="width:100%; border-radius:20px; border:1px solid var(--border);" onerror="this.src='https://via.placeholder.com/400x300/161e2e/ffffff?text=Dream+Ladders'">
                 </div>
@@ -247,63 +243,57 @@
                 </div>
             </section>
 
-            <section class="ecosystem-card">
+            <section class="ecosystem-card" data-aos="fade-right">
                 <div class="info">
                     <div class="badge" style="color:var(--accent-eng); border-color: var(--accent-eng);">Engineering Logic</div>
                     <h2>IS 456 Design Engine</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
-                        A web-based validator for RCC beam design. Automates Limit State Method (LSM) calculations and real-time BOQ estimation.
-                    </p>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">A web-based validator for RCC beam design. Automates Limit State Method (LSM) calculations and BOQ estimation.</p>
                     <a href="https://rajeshshambudu.github.io/IS456-2000/" target="_blank" class="btn-main" style="background:var(--accent-eng);">Launch Tool →</a>
                 </div>
                 <div class="visual" style="text-align: center; opacity: 0.5;">
-                    <i class="fas fa-calculator" style="font-size: 100px;"></i>
+                    <i class="fas fa-calculator" style="font-size: 80px;"></i>
                 </div>
             </section>
 
-            <section class="ecosystem-card" style="border-top: 1px solid var(--accent);">
+            <section class="ecosystem-card" style="border-top: 1px solid var(--accent);" data-aos="fade-up">
                 <div class="info">
                     <div class="badge" style="color:var(--accent); border-color: var(--accent);">Development Agency</div>
                     <h2>Scalable Automation</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
-                        Custom web architecture for consultants. Building high-speed portfolios, WhatsApp-integrated business sites, and professional SEO tools.
-                    </p>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Custom web architecture for consultants. Building high-speed portfolios and automated business sites.</p>
                     <ul style="list-style: none; color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
                         <li><span style="color: var(--accent);">✔</span> Web Apps</li>
-                        <li><span style="color: var(--accent);">✔</span> DevOps</li>
-                        <li><span style="color: var(--accent);">✔</span> Automation</li>
-                        <li><span style="color: var(--accent);">✔</span> SEO</li>
+                        <li><span style="color: var(--accent);">✔</span> DevOps Automation</li>
+                        <li><span style="color: var(--accent);">✔</span> Custom SEO Tools</li>
                     </ul>
                     <a href="https://rajeshshambudu.github.io/Landing/" target="_blank" class="btn-main">Get a Website →</a>
                 </div>
                 <div class="visual" style="display: flex; justify-content: center;">
-                    <div style="background: #030712; padding: 25px; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
-                        <div style="width: 80px; height: 4px; background: var(--accent); border-radius: 2px; margin-bottom: 15px;"></div>
-                        <div style="width: 140px; height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 15px;"></div>
-                        <div style="width: 100px; height: 30px; background: var(--accent); border-radius: 6px; opacity: 0.2;"></div>
+                    <div style="background: #030712; padding: 20px; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
+                        <div style="width: 60px; height: 3px; background: var(--accent); border-radius: 2px; margin-bottom: 10px;"></div>
+                        <div style="width: 100px; height: 3px; background: var(--border); border-radius: 2px; margin-bottom: 10px;"></div>
+                        <div style="width: 80px; height: 20px; background: var(--accent); border-radius: 6px; opacity: 0.2;"></div>
                     </div>
                 </div>
             </section>
 
-            <section class="contact-box">
+            <section class="contact-box" data-aos="zoom-in">
                 <h2>Direct Collaboration</h2>
                 <a href="mailto:shambudurajesh05@gmail.com" class="email-display">shambudurajesh05@gmail.com</a>
                 <p style="color: var(--accent);">Nizamabad • Remote • Worldwide</p>
             </section>
         </main>
 
-        <footer class="unified-footer" style="margin-top: 50px; padding: 40px 0; border-top: 1px solid var(--border); text-align: left;">
+        <footer class="unified-footer" style="margin-top: 50px; padding: 40px 0; border-top: 1px solid var(--border);">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
                 <div>
-                    <h3 style="color: var(--accent); margin-bottom: 10px;">Dream Ladders</h3>
-                    <p style="font-size: 13px; color: var(--text-dim);">Bridging engineering and automation.</p>
+                    <h3 style="color: var(--accent); margin-bottom: 10px;">The Ecosystem</h3>
+                    <p style="font-size: 13px; color: var(--text-dim);">A unified space where civil engineering logic meets cloud-scale automation. Designed for 2026 and beyond.</p>
                 </div>
                 <div>
-                    <h4 style="font-size: 14px; margin-bottom: 10px;">Navigation</h4>
+                    <h4 style="font-size: 14px; margin-bottom: 10px;">Quick Access</h4>
                     <ul style="list-style: none; font-size: 13px; line-height: 2;">
-                        <li><a href="https://rajeshshambudu.github.io/Portfolio/" style="color: var(--text-dim); text-decoration: none;">👤 Portfolio</a></li>
                         <li><a href="https://rajeshshambudu.github.io/Landing/" style="color: var(--text-dim); text-decoration: none;">🚀 Services</a></li>
-                        <li><a href="https://rajeshshambudu.github.io/DREAM-LADDERS/" style="color: var(--text-dim); text-decoration: none;">🏢 Business Brand</a></li>
+                        <li><a href="https://rajeshshambudu.github.io/telangana.com/index.html" style="color: var(--text-dim); text-decoration: none;">🔍 Surveyor Directory</a></li>
                         <li><a href="https://rajeshshambudu.github.io/IS456-2000/" style="color: var(--text-dim); text-decoration: none;">🧮 Design Tool</a></li>
                     </ul>
                 </div>
@@ -320,7 +310,7 @@
                 <span style="font-weight: 600; font-size: 0.9rem;">Dream Ladders Chat</span>
                 <button onclick="toggleChat()" style="background:none; border:none; color:white; cursor:pointer;">✕</button>
             </div>
-            <iframe src="https://rajeshshambudu.github.io/Chat/" id="chat-iframe"></iframe>
+            <iframe src="https://rajeshshambudu.github.io/Chat/" style="width:100%; height:100%; border:none;"></iframe>
         </div>
         <div class="chat-bubble" onclick="toggleChat()">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b0f1a" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -328,26 +318,10 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function toggleChat() {
-            document.getElementById('chatWindow').classList.toggle('active');
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.bento-card, .ecosystem-card, .contact-box').forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(30px)";
-            el.style.transition = "all 0.8s ease-out";
-            observer.observe(el);
-        });
+        AOS.init({ duration: 1000, once: true });
+        function toggleChat() { document.getElementById('chatWindow').classList.toggle('active'); }
     </script>
 </body>
 </html>
