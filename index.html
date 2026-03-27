@@ -24,6 +24,7 @@
             --border: rgba(255, 255, 255, 0.08);
         }
 
+        /* --- BASIC RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
@@ -69,7 +70,26 @@
         }
 
         /* --- HERO --- */
-        header { padding: 120px 0 80px; text-align: center; }
+        header { padding: 80px 0 60px; text-align: center; }
+        
+        /* NEW: CEO Profile Image Styling */
+        .profile-img-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(45deg, var(--accent), var(--accent-2));
+            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.2);
+        }
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg);
+        }
+
         .badge {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -91,7 +111,21 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
-        .hero-tagline { font-size: 1.2rem; color: var(--text-dim); max-width: 650px; margin: 0 auto; }
+        .hero-tagline { font-size: 1.2rem; color: var(--text-dim); max-width: 650px; margin: 0 auto 2rem; }
+
+        /* NEW: Executive Bio Section */
+        .executive-summary {
+            max-width: 750px;
+            margin: 0 auto 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+        .executive-summary strong { color: #fff; }
 
         /* --- BENTO SKILLS --- */
         .bento-grid {
@@ -194,11 +228,20 @@
 
         <main>
             <header>
+                <div class="profile-img-container">
+                    <img src="rajesh-ceo.jpg" alt="Shambudu Rajesh Kumar" onerror="this.src='https://via.placeholder.com/180x180/161e2e/ffffff?text=Rajesh+Kumar'">
+                </div>
+                
                 <div class="badge">Portfolio Ecosystem 2026</div>
                 <h1>Shambudu Rajesh Kumar</h1>
                 <p class="hero-tagline">
-                    <strong>Azure DevOps Engineer</strong> | <strong>Civil Engineer</strong> | <strong>Music Producer</strong>
+                    Bridging engineering precision with digital scalability.
                 </p>
+                
+                <div class="executive-summary">
+                    "I build systems that endure—whether they are made of <strong>steel, code, or sound</strong>." <br><br>
+                    As a multidisciplinary leader, I combine the structural rigor of <strong>Civil Engineering</strong> with the technical agility of <strong>Azure DevOps</strong> to create robust, future-proof infrastructures.
+                </div>
             </header>
 
             <section class="bento-grid">
@@ -342,7 +385,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.bento-card, .ecosystem-card, .contact-box').forEach(el => {
+        document.querySelectorAll('.bento-card, .ecosystem-card, .contact-box, .executive-summary').forEach(el => {
             el.style.opacity = "0";
             el.style.transform = "translateY(30px)";
             el.style.transition = "all 0.8s ease-out";
