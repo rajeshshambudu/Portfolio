@@ -172,6 +172,93 @@
         }
         .btn-main:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
 
+
+        
+/* --- CONNECTAPP PROJECT --- */
+.connectapp-card {
+    position: relative;
+}
+
+.connectapp-card::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 260px;
+    height: 260px;
+    background: rgba(56, 189, 248, 0.08);
+    filter: blur(70px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.connectapp-tag {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.connectapp-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+}
+
+.connectapp-tech span {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.04);
+    padding: 0.45rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.connectapp-visual {
+    min-height: 260px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: linear-gradient(
+        135deg,
+        rgba(56,189,248,0.12),
+        rgba(99,102,241,0.08)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
+.connectapp-visual .app-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.connectapp-visual h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.connectapp-visual p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .connectapp-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+        
+        
         /* --- CONTACT BOX --- */
         .contact-box {
             background: linear-gradient(145deg, #161e2e, #0b0f1a);
